@@ -11,6 +11,7 @@
             margin: 0;
             padding: 20px;
             background-color: #f0f8ff;
+            overflow-y: scroll;
         }
         .rebus {
             margin: 20px 0;
@@ -38,6 +39,15 @@
             font-size: 18px;
             font-weight: bold;
         }
+        .footer {
+            margin-top: 50px;
+            font-size: 24px;
+            color: #555;
+            cursor: pointer;
+        }
+        .footer:hover {
+            color: #000;
+        }
     </style>
 </head>
 <body>
@@ -48,6 +58,7 @@
     <input type="text" id="answer" placeholder="Enter your answer here">
     <button onclick="checkAnswer()">Submit</button>
     <div class="message" id="message"></div>
+    <div class="footer" onclick="revealAnswer()">SHHHHH</div>
 
     <script>
         function checkAnswer() {
@@ -61,6 +72,10 @@
                 message.textContent = "Incorrect! Try again.";
                 message.style.color = "red";
             }
+        }
+
+        function revealAnswer() {
+            alert("Odgovor je: Johnny Depp");
         }
     </script>
 </body>
